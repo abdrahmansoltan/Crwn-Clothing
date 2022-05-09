@@ -5,6 +5,8 @@ import {
   GoogleAuthProvider,
   createUserWithEmailAndPassword, // the native provider for sign-up
   signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged, // this returns a listener so that it can be used with context
 } from "firebase/auth";
 import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 
@@ -78,4 +80,12 @@ export const signInAuthUserWithEmailAndPassword = async (email, password) => {
   if (!email || !password) return;
 
   return await signInWithEmailAndPassword(auth, email, password);
+};
+
+// SIGN OUT
+export const signOutUser = async () => await signOut(auth);
+
+// OBSERVER PATTERN
+export const onAuthStateChangedListener = (callback) => {
+  onAuthStateChanged(auth, callback);
 };
