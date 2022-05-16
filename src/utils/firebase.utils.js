@@ -8,7 +8,16 @@ import {
   signOut,
   onAuthStateChanged, // this returns a listener so that it can be used with context
 } from "firebase/auth";
-import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
+import {
+  getFirestore,
+  doc,
+  getDoc,
+  setDoc,
+  collection,
+  writeBatch,
+  query,
+  getDocs,
+} from "firebase/firestore";
 
 // // My web app's Firebase configuration
 const firebaseConfig = {
@@ -37,6 +46,39 @@ export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
 // -----------FireStore----------- //
 // using getFireStore() to access the database
 export const db = getFirestore();
+// creating data collection
+
+export const addCollectionAndDocuments = async (
+  collectionKey,
+  objectsToAdd
+) => {
+  const collectionRef = collection(db, collectionKey);
+  const batch = writeBatch(db); // creating a batch instance in the database to insure that the transaction is [ACID]
+
+  objectsToAdd.forEach((object) => {
+    const docRef = doc(collectionRef, object.title.toLowerCase()); // creating a document Ref(key) for each object in the shop-data
+    batch.set(docRef, object); // connecting the ref with the object
+  });
+
+  await batch.commit();
+  console.log("done");
+};
+
+// steps are from firebase
+export const getCategoriesAndDocuments = async () => {
+  const collectionRef = collection(db, "categories");
+
+  const q = query(collectionRef);
+  const querySnapshot = await getDocs(q);
+  const categoryMap = querySnapshot.docs.reduce((acc, docSnapshot) => {
+    // acc is for 'accumulator'
+    const { title, items } = docSnapshot.data();
+    acc[title.toLowerCase()] = items;
+    return acc;
+  }, {});
+
+  return categoryMap;
+};
 
 // GOOGLE SIGN-UP (CREATING A NEW USER )
 export const createUserDocumentFromAuth = async (
