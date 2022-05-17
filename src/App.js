@@ -17,7 +17,7 @@ import { setCurrentUser } from "./store/user/user.action";
 function App() {
   const dispatch = useDispatch();
 
-  // only runs the function inside when component first mounts and will check for user authentication
+  // it's in app.js as the every other routes require the user-data
   useEffect(() => {
     // OBSERVER PATTERN
     const unsubscribe = onAuthStateChangedListener((user) => {
