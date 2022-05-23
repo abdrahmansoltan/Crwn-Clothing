@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import { useDispatch } from "react-redux";
 import { Outlet, Link } from "react-router-dom";
 
 import CartIcon from "../../components/cart-icon/cart-icon.component";
@@ -12,7 +13,9 @@ import { selectCurrentUser } from "../../store/user/user.selector";
 import { selectIsCartOpen } from "../../store/cart/cart.selector";
 
 import { ReactComponent as CrwnLogo } from "../../assets/crown.svg";
-import { signOutUser } from "../../utils/firebase.utils";
+
+// import { signOutUser } from "../../utils/firebase.utils";
+import { signOutStart } from "../../store/user/user.action";
 
 import {
   NavigationContainer,
@@ -22,11 +25,15 @@ import {
 } from "./navigation.styles";
 
 const Navigation = () => {
+  const dispatch = useDispatch();
+
   // const { currentUser } = useContext(UserContext); // the function rerenders when the value change
   const currentUser = useSelector(selectCurrentUser);
 
   // const { isCartOpen } = useContext(CartContext);
   const isCartOpen = useSelector(selectIsCartOpen);
+
+  const signOutUser = () => dispatch(signOutStart());
 
   return (
     <Fragment>
@@ -44,6 +51,7 @@ const Navigation = () => {
           ) : (
             <NavLink to="/auth">SIGN IN</NavLink>
           )}
+
           <CartIcon />
         </NavLinks>
         {isCartOpen && <CartDropdown />}

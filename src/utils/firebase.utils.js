@@ -100,7 +100,7 @@ export const createUserDocumentFromAuth = async (
     }
   }
 
-  return userDocRef; // if user already exists
+  return userSnapshot; // if user already exists
 };
 
 // NATIVE SIGN-UP (CREATING A NEW USER )
@@ -123,4 +123,22 @@ export const signOutUser = async () => await signOut(auth);
 // OBSERVER PATTERN
 export const onAuthStateChangedListener = (callback) => {
   onAuthStateChanged(auth, callback);
+};
+
+// -------------------------------------------------------
+
+// Converting AuthChanged Listener into a Promise
+export const getCurrentUser = () => {
+  return new Promise((resolve, reject) => {
+    // method from firebase-auth
+    const unsubscribe = onAuthStateChanged(
+      auth,
+      (userAuth) => {
+        // now we have the value of userAuth status
+        unsubscribe(); // anyway we first unsubscribe -> to close the listener (fix memory-leak)
+        resolve(userAuth);
+      },
+      reject
+    );
+  });
 };
