@@ -11,13 +11,19 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { PersistGate } from "redux-persist/integration/react";
 
+// stripe
+import { Elements } from "@stripe/react-stripe-js";
+import { stripePromise } from "./utils/stripe.utils";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate persistor={persistor}>
         <BrowserRouter>
-          <App />
+          <Elements stripe={stripePromise}>
+            <App />
+          </Elements>
         </BrowserRouter>
       </PersistGate>
     </Provider>
