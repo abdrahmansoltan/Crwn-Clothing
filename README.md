@@ -14,14 +14,14 @@
 <!-- PROJECT LOGO -->
 <div align="center">
 
-<a href="crwn-clothing-abdelrahmansoltan.netlify.app">
+<a href="https://crwn-clothing-abdelrahmansoltan.netlify.app/">
     <img src="./src/assets/crown.svg" alt="Logo" height="50"  >
   </a>
 
   <h2 align="center">Crwn-Clothing</h2>
 
   <p align="center">
-  <a href="crwn-clothing-abdelrahmansoltan.netlify.app">View Demo</a>
+  <a href="https://crwn-clothing-abdelrahmansoltan.netlify.app/">View Demo</a>
     ·
     <a href="https://github.com/abdrahmansoltan/Crwn-Clothing/issues">Report Bug</a>
   </p>
@@ -78,7 +78,7 @@ Full Stack E-Commerce Clothing shop made using React & firebase with Stripe paym
 
 This project require some prequesites and dependenscies to be installed, you can find the instructions below
 
-This project require some prequesites and dependenscies to be installed, you can view it online using this [demo](crwn-clothing-abdelrahmansoltan.netlify.app). or you can find the instructions below:
+This project require some prequesites and dependenscies to be installed, you can view it online using this [demo](https://crwn-clothing-abdelrahmansoltan.netlify.app/). or you can find the instructions below:
 
 > To get a local copy, follow these simple steps :
 
@@ -137,7 +137,7 @@ This project require some prequesites and dependenscies to be installed, you can
 ### Stripe
 
 - To use test-payment use any dummmy data like these:
-  - Card Number: `4848 4848 4848 4848`
+  - Card Number: `4242 4242 4242 4242`
   - MM/YY: `Any date in the future`
   - CVC: `484`
   - ZIP: `22515`
