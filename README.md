@@ -3,21 +3,25 @@
 <div id="top"></div>
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Js](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)
+![Redux Saga](https://img.shields.io/badge/Redux%20saga-86D46B?style=for-the-badge&logo=redux%20saga&logoColor=999999)
 ![styled-components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![Firebase](https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black)
+![Stripe](https://img.shields.io/badge/Stripe-626CD9?style=for-the-badge&logo=Stripe&logoColor=white)
+![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
 
 <!-- PROJECT LOGO -->
 <div align="center">
 
-<a href="https://crwn-clothing-xi.vercel.app/">
+<a href="crwn-clothing-abdelrahmansoltan.netlify.app">
     <img src="./src/assets/crown.svg" alt="Logo" height="50"  >
   </a>
 
   <h2 align="center">Crwn-Clothing</h2>
 
   <p align="center">
-  <a href="https://crwn-clothing-xi.vercel.app/">View Demo</a>
+  <a href="crwn-clothing-abdelrahmansoltan.netlify.app">View Demo</a>
     ·
     <a href="https://github.com/abdrahmansoltan/Crwn-Clothing/issues">Report Bug</a>
   </p>
@@ -37,7 +41,7 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#installation">Installation</a></li>
-        <li><a href="#ports">Ports</a></li>
+        <li><a href="#stripe">Stripe</a></li>
       </ul>
     </li>
     <li><a href="#contributing">Contributing</a></li>
@@ -56,8 +60,13 @@ Full Stack E-Commerce Clothing shop made using React & firebase with Stripe paym
 ### Built With
 
 - React
-- Javascript
+- React Router
+- Redux
+- Redux Saga
 - Styled-Components
+- Firebase
+- Stripe
+- Netlify
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -69,7 +78,7 @@ Full Stack E-Commerce Clothing shop made using React & firebase with Stripe paym
 
 This project require some prequesites and dependenscies to be installed, you can find the instructions below
 
-This project require some prequesites and dependenscies to be installed, you can view it online using this [demo](https://crwn-clothing-xi.vercel.app/). or you can find the instructions below:
+This project require some prequesites and dependenscies to be installed, you can view it online using this [demo](crwn-clothing-abdelrahmansoltan.netlify.app). or you can find the instructions below:
 
 > To get a local copy, follow these simple steps :
 
@@ -93,15 +102,45 @@ This project require some prequesites and dependenscies to be installed, you can
    npm install
    ```
 
-4. Run development server
+4. Enviromental Variables Set up
+
+   - Here are the environmental variables that needs to be set in a `.env` file. This is the default setting that I used for development, but you can change it to what works for you.
+
+   ```
+   REACT_APP_STRIPE_PUBLISHABLE_KEY="your stripe publish key "
+   STRIPE_SECRET_KEY="your stripe secret key "
+   ```
+
+5. Run development server
 
    ```sh
    npm start
    ```
 
-### Ports
+- To run **serverless function** locally, use [Netlify CLI](https://docs.netlify.com/cli/get-started/)
 
-- Development Server runs on port `3000`
+  ```sh
+  # install CLI-tool globally
+  npm install netlify-cli -g
+
+  # login with you account
+  netlify login
+
+  # run development server with serverless function
+  netlify dev
+  ```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+---
+
+### Stripe
+
+- To use test-payment use any dummmy data like these:
+  - Card Number: `4848 4848 4848 4848`
+  - MM/YY: `Any date in the future`
+  - CVC: `484`
+  - ZIP: `22515`
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -128,4 +167,4 @@ Don't forget to give the project a star! Thanks again!
 
 ## Acknowledgments
 
-- [odziem](https://github.com/odziem)
+- [Yihua Zhang](https://github.com/ZhangMYihua)
