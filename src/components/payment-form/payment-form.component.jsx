@@ -29,10 +29,11 @@ const PaymentForm = () => {
 
     // creating a payment-intent -> https://stripe.com/docs/payments/payment-intents
 
-    const response = await fetch("/.netlify/functions/create-payment-intent", {
+    const response = await fetch("/api/create-payment-intent", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
+        Accept: "application/json",
       },
       body: JSON.stringify({ amount: amount * 100 }), // amount in cents
     }).then((res) => {
