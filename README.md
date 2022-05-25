@@ -14,14 +14,14 @@
 <!-- PROJECT LOGO -->
 <div align="center">
 
-<a href="https://crwn-clothing-abdelrahmansoltan.netlify.app/">
+<a href="https://crwn-clothing2-84kv5r500-abdrahmansoltan.vercel.app/">
     <img src="./src/assets/crown.svg" alt="Logo" height="50"  >
   </a>
 
   <h2 align="center">Crwn-Clothing</h2>
 
   <p align="center">
-  <a href="https://crwn-clothing-abdelrahmansoltan.netlify.app/">View Demo</a>
+  <a href="https://crwn-clothing2-84kv5r500-abdrahmansoltan.vercel.app/">View Demo</a>
     ·
     <a href="https://github.com/abdrahmansoltan/Crwn-Clothing/issues">Report Bug</a>
   </p>
@@ -78,7 +78,7 @@ Full Stack E-Commerce Clothing shop made using React & firebase with Stripe paym
 
 This project require some prequesites and dependenscies to be installed, you can find the instructions below
 
-This project require some prequesites and dependenscies to be installed, you can view it online using this [demo](https://crwn-clothing-abdelrahmansoltan.netlify.app/). or you can find the instructions below:
+This project require some prequesites and dependenscies to be installed, you can view it online using this [demo](https://crwn-clothing2-84kv5r500-abdrahmansoltan.vercel.app/). or you can find the instructions below:
 
 > To get a local copy, follow these simple steps :
 
