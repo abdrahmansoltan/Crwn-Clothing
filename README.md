@@ -9,19 +9,18 @@
 ![styled-components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 ![Firebase](https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black)
 ![Stripe](https://img.shields.io/badge/Stripe-626CD9?style=for-the-badge&logo=Stripe&logoColor=white)
-<!-- ![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white) -->
 
 <!-- PROJECT LOGO -->
 <div align="center">
 
-<a href="https://crwn-clothing2-84kv5r500-abdrahmansoltan.vercel.app/">
+<a href="https://crwn-clothing-lovat.vercel.app/">
     <img src="./src/assets/crown.svg" alt="Logo" height="50"  >
   </a>
 
   <h2 align="center">Crwn-Clothing</h2>
 
   <p align="center">
-  <a href="https://crwn-clothing2-84kv5r500-abdrahmansoltan.vercel.app/">View Demo</a>
+  <a href="https://crwn-clothing-lovat.vercel.app/">View Demo</a>
     ·
     <a href="https://github.com/abdrahmansoltan/Crwn-Clothing/issues">Report Bug</a>
   </p>
@@ -66,7 +65,6 @@ Full Stack E-Commerce Clothing shop made using React & firebase with Stripe paym
 - Styled-Components
 - Firebase
 - Stripe
-- Netlify
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -78,7 +76,7 @@ Full Stack E-Commerce Clothing shop made using React & firebase with Stripe paym
 
 This project require some prequesites and dependenscies to be installed, you can find the instructions below
 
-This project require some prequesites and dependenscies to be installed, you can view it online using this [demo](https://crwn-clothing2-84kv5r500-abdrahmansoltan.vercel.app/). or you can find the instructions below:
+This project require some prequesites and dependenscies to be installed, you can view it online using this [demo](https://crwn-clothing-lovat.vercel.app/). or you can find the instructions below:
 
 > To get a local copy, follow these simple steps :
 
@@ -117,17 +115,17 @@ This project require some prequesites and dependenscies to be installed, you can
    npm start
    ```
 
-- To run **serverless function** locally, use [Netlify CLI](https://docs.netlify.com/cli/get-started/)
+- To run **serverless function** locally, use [Vercel CLI](https://vercel.com/cli)
 
   ```sh
   # install CLI-tool globally
-  npm install netlify-cli -g
+  npm i -g vercel
 
   # login with you account
-  netlify login
+  vercel login
 
   # run development server with serverless function
-  netlify dev
+  vercel dev
   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -139,8 +137,8 @@ This project require some prequesites and dependenscies to be installed, you can
 - To use test-payment use any dummmy data like these:
   - Card Number: `4242 4242 4242 4242`
   - MM/YY: `Any date in the future`
-  - CVC: `484`
-  - ZIP: `22515`
+  - CVC: `424`
+  - ZIP: `42424`
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
